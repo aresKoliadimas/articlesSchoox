@@ -1,0 +1,12 @@
+<div *ngIf="articles.length"
+     class="articles-wrapper">
+  <ng-container *ngFor="let article of articles">
+    <app-article [article]="article"></app-article>
+  </ng-container>
+</div>
+<div *ngIf="!articles.length"
+     class="placeholder-wrapper">
+  <span class="placeholder">
+    {{ noArticlesPlaceholderText }}
+  </span>
+</div>

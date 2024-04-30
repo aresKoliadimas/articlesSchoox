@@ -1,0 +1,31 @@
+@import "../../../assets/_palette.scss";
+
+.articles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1.2rem;
+}
+
+.placeholder-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+  font-size: 3rem;
+  color: $primary-color;
+
+  .placeholder {
+    width: 30vw;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .articles-wrapper {
+    flex-direction: column;
+  }
+
+  .placeholder-wrapper {
+    font-size: 2rem;
+  }
+}
