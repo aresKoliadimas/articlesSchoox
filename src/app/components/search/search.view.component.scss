@@ -1,0 +1,24 @@
+@import "../../../assets/_palette.scss";
+
+.search-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: $secondary-background-color;
+  height: 130px;
+
+  .search {
+    margin: 45px;
+    width: 30vw;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $primary-color;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
