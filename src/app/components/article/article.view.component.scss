@@ -1,0 +1,119 @@
+@import "../../../assets/_palette.scss";
+
+.article-wrapper {
+  border: 1px solid $primary-color;
+  padding: 10px;
+  margin: 10px;
+  width: 70ch;
+
+  .article-metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .article-title-author-wrapper {
+      width: 85%;
+
+      .article-title {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+
+      .article-author {
+        color: $primary-color;
+      }
+    }
+
+    .article-date-wrapper {
+      width: 15%;
+
+      .article-date {
+        font-size: 0.8rem;
+        font-style: italic;
+
+        strong {
+          text-wrap: nowrap;
+        }
+      }
+    }
+  }
+
+  .expand-button {
+    display: none;
+  }
+
+  .article-body {
+    margin-top: 30px;
+    max-width: 70ch;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .article-wrapper {
+    width: 80vw;
+
+    .article-metadata {
+      font-size: 0.5rem;
+
+      .article-title-author-wrapper {
+        width: 70%;
+
+        .article-title {
+          font-size: 1.5rem;
+          font-weight: 800;
+        }
+
+        .article-author {
+          font-size: 1rem;
+        }
+      }
+
+      .article-date-wrapper {
+        width: 30%;
+        display: flex;
+        justify-content: end;
+
+        .article-date {
+          font-size: 0.8rem;
+          font-style: italic;
+          margin-inline: 10px;
+
+          strong {
+            text-wrap: nowrap;
+          }
+        }
+      }
+    }
+
+    .expand-button-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .expand-button {
+        display: block;
+        display: block;
+        background: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        font-size: 2rem;
+        color: $primary-color;
+      }
+    }
+
+    .article-body {
+      display: none;
+
+      &.isDisplayed {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .article-date-wrapper {
+    flex-direction: column;
+  }
+}

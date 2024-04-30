@@ -1,0 +1,43 @@
+<div class="article-wrapper">
+  <div class="article-metadata">
+    <div class="article-title-author-wrapper">
+      <div class="article-title">
+        {{ article?.title }}
+      </div>
+      <div *ngFor="let author of article?.authors"
+           class="article-author">
+        <span>
+          {{ byText + author.name }}
+        </span>
+      </div>
+    </div>
+    <div class="article-date-wrapper">
+      <div class="article-date">
+        <div>
+          {{ createdOnText }}
+        </div>
+        <strong>
+          {{ article?.createdDate | date }}
+        </strong>
+      </div>
+      <div class="article-date">
+        <div>
+          {{ updatedOnText }}
+        </div>
+        <strong>
+          {{ article?.updatedDate | date }}
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div class="article-body"
+       [ngClass]="{'isDisplayed': isBodyExpanded}">
+    {{ article?.body }}
+  </div>
+  <div class="expand-button-wrapper">
+    <button class="expand-button"
+            (click)="onExpandBody()">
+      {{ isBodyExpanded ? upArrowText : downArrowText }}
+    </button>
+  </div>
+</div>
